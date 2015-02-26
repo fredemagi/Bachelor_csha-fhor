@@ -22,7 +22,10 @@ namespace VotingSystem
     {
         public MainWindow()
         {
-            InitializeComponent();
+            var sql = new SQLConnector();
+            sql.Trying();
+
+            //InitializeComponent();
         }
     }
 }
