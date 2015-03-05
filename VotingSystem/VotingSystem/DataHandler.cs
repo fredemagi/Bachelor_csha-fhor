@@ -8,6 +8,7 @@ namespace VotingSystem
 {
     public class DataHandler
     {
+        /*
         //Insert statement
         public void Insert()
         {
@@ -23,10 +24,12 @@ namespace VotingSystem
         {
         }
 
+        
         //Select statement
         public List<string> Select()
         {
-        }
+            
+        }*/
 
        
     }
