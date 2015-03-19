@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\FredeMagi\Documents\GitHub\Bachelor_csha-fhor\Voting System\Voting System\Database\Database.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\SATLP850132\Desktop\SEM6\BACHELOR_PROJ\Bachelor_csha-fhor\Bachelor_csha-fhor\Voting System\Voting System\Database\Database.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

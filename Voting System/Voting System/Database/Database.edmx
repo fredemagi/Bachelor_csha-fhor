@@ -4,27 +4,136 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Database.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="DatabaseTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="Database.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DatabaseStoreContainer">
+    <EntitySet Name="VotingSet" EntityType="Database.Store.VotingSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PartySet" EntityType="Database.Store.PartySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonSet" EntityType="Database.Store.PersonSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Association" Association="Database.Store.Association">
+      <End Role="Person" EntitySet="PersonSet" />
+      <End Role="Party" EntitySet="PartySet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="VotingSet">
+    <Key>
+      <PropertyRef Name="CPR" />
+    </Key>
+    <Property Name="CPR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="Letter" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Votes" Type="int" Nullable="false" />
+    <Property Name="Party_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Association">
+    <End Role="Person" Type="Database.Store.PersonSet" Multiplicity="*" />
+    <End Role="Party" Type="Database.Store.PartySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Party">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Party_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Database" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DatabaseContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VotingSet" EntityType="Database.Voting" />
+          <EntitySet Name="PartySet" EntityType="Database.Party" />
+          <EntitySet Name="PersonSet" EntityType="Database.Person" />
+          <AssociationSet Name="Association" Association="Database.Association">
+            <End Role="Person" EntitySet="PersonSet" />
+            <End Role="Party" EntitySet="PartySet" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Voting">
+          <Key>
+            <PropertyRef Name="CPR" />
+          </Key>
+          <Property Name="CPR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Party">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Votes" Type="Int32" Nullable="false" />
+          <Property Name="Letter" Type="String" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="Database.Association" FromRole="Party" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Votes" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Party" Relationship="Database.Association" FromRole="Person" ToRole="Party" />
+        </EntityType>
+        <Association Name="Association">
+          <End Type="Database.Person" Role="Person" Multiplicity="*" />
+          <End Type="Database.Party" Role="Party" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="Database" />
-        <Alias Key="Target" Value="Database.Store" />
-        <EntityContainerMapping CdmEntityContainer="DatabaseContainer" StorageEntityContainer="DatabaseTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseStoreContainer" CdmEntityContainer="DatabaseContainer">
+    <EntitySetMapping Name="VotingSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Database.Voting)">
+        <MappingFragment StoreEntitySet="VotingSet">
+          <ScalarProperty Name="CPR" ColumnName="CPR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Database.Party)">
+        <MappingFragment StoreEntitySet="PartySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+          <ScalarProperty Name="Letter" ColumnName="Letter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Database.Person)">
+        <MappingFragment StoreEntitySet="PersonSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Votes" ColumnName="Votes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Association" TypeName="Database.Association" StoreEntitySet="PersonSet">
+      <EndProperty Name="Party">
+        <ScalarProperty Name="Id" ColumnName="Party_Id" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -38,6 +147,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
