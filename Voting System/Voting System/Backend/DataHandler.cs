@@ -33,10 +33,10 @@ namespace Voting_System.Backend
         }
 
 
-        public PartyDTO testing()
-        {
-            InitDb();
-            PartyDTO party = new PartyDTO{name = "FEJLEDE!!!"};
+       // public PartyDTO testing()
+        //{
+          //  InitDb();
+           // PartyDTO party = new PartyDTO{name = "FEJLEDE!!!"};
            /* using (var dbContext = new DatabaseContainer())
             {
                 var query = from p in dbContext.PartySet select p;
@@ -56,8 +56,8 @@ namespace Voting_System.Backend
             }*/
 
 
-            return party;
+           // return party;
 
-        }
+        //}
     }
 }

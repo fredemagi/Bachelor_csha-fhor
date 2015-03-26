@@ -12,8 +12,8 @@ namespace Voting_System.DTO
     public class PartyDTO
     {
 
-        public string name { get; set; }
-     
+        public string Navn { get; set; }
+        public bool Test { get; set; }
 
 
 
