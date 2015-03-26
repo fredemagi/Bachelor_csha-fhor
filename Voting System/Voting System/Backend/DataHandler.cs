@@ -12,30 +12,18 @@ namespace Voting_System.Backend
 {
     public class DataHandler
     {
-        public void InitDb()
-        {
-            using (var dbContext = new DatabaseContainer())
-            {
-                dbContext.PartySet.Add(
-                        new Party { Id = 1, Name = "Socialdemokraterne", 
-                                    Letter = "A", 
-                                    Votes = 1000, 
-                                    Person = new Collection<Person>() });
-            }
-        }
-
         public void method()
         {
             using (var dbContext = new DatabaseContainer())
             {
-                var query = from party in dbContext.PartySet where party.Id == 1 select party;
+                var query = from party in dbContext.PartySet select party;
+                
             }
         }
 
 
         public PartyDTO testing()
         {
-            InitDb();
             PartyDTO party = new PartyDTO{name = "FEJLEDE!!!"};
            /* using (var dbContext = new DatabaseContainer())
             {
