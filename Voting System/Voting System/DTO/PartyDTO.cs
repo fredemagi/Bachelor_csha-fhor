@@ -13,7 +13,7 @@ namespace Voting_System.DTO
     {
 
         public string Navn { get; set; }
-        public bool Test { get; set; }
+        public string Bogstav { get; set; }
 
 
 

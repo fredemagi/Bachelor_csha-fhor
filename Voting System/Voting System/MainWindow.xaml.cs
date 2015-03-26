@@ -19,27 +19,17 @@ namespace Voting_System
         public MainWindow()
         {
             InitializeComponent();
-            var party = new PartyDTO {Navn = "Hanne Lotte", Test = false};
-            var party3 = new PartyDTO {Navn = "Lars Lonely Jensen", Test = true};
+            var dh = new DataHandler();
+
+            //Henter alle data fra databasen for partier.
+            var items = dh.method();
+
+            
            
-         
-            List<PartyDTO> list = new List<PartyDTO>();
+        
 
-            list.Add(party);
-            list.Add(party3);
+            datagrid1.ItemsSource = items;  //ESSENTIAL PART. SET TO DATA SOURCE!
 
-            datagrid1.ItemsSource = list;   //ESSENTIAL PART. SET TO DATA SOURCE!
-
-
-            /*  
-            var adap = new SqlDataAdapter();
-            //adap.SelectCommand = ;
-            DataTable dataTable = new DataTable();
-            adap.Fill(dataTable);
-            var bs = new BindingSource();
-            bs.DataSource = dataTable;
-            datagrid1.ItemsSource = bs;
-            adap.Update(dataTable);*/
 
 
 
@@ -53,9 +43,9 @@ namespace Voting_System
 
         }
 
-        private void datagrid1_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void datagrid1_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e) //DETTE EVENT SKAL BRUGES TIL AT OPDATERE COUNT I DATABASEN!!!!
         {
-            var rows = datagrid1.SelectedCells;
+            var rows = datagrid1.SelectedCells;  //REN TESTING FOR AT SE, OM JEG KUNNE FÅ HELE DEN VALGTE RÆKKE I DATAGRID
          
         }
         
