@@ -18,11 +18,18 @@ namespace Voting_System.Database
         public DatabaseContainer()
             : base("name=DatabaseContainer")
         {
+            Database.SetInitializer<DatabaseContainer>(new VotingDBInitializer());
+            //Database.SetInitializer<DatabaseContainer>(null);
         }
     
+        public DatabaseContainer(int i) : base("name=dbConnection")
+        {
+            Database.SetInitializer<DatabaseContainer>(new VotingDBInitializer());
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            
         }
     
         public virtual DbSet<Voting> VotingSet { get; set; }
