@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Voting_System.DTO
 {
-    class VSDTO
+    public class VSDTO
     {
         public string Name { get; set; }
         public string Letter { get; set; }

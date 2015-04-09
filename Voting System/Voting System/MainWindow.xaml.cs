@@ -2,11 +2,15 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Voting_System.Backend;
+using Voting_System.Database;
 using Voting_System.DTO;
+using DataGrid = System.Windows.Forms.DataGrid;
 using MessageBox = System.Windows.MessageBox;
 
 namespace Voting_System
@@ -16,20 +20,33 @@ namespace Voting_System
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
+        
+        public List<VSDTO> Data { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             var dh = new DataHandler();
 
-            //Henter alle data fra databasen for partier.
-            var items = dh.method();
 
-            
-           
+
+
+            this.DataContext = Data;
+            //Henter alle data fra databasen for partier.
+            Data = dh.GetParties();
+
+
+
+
+            datagrid1.ItemsSource = Data;  //ESSENTIAL PART. SET TO DATA SOURCE!
         
 
-            datagrid1.ItemsSource = items;  //ESSENTIAL PART. SET TO DATA SOURCE!
 
+              
+        
+
+          
 
 
 
@@ -37,7 +54,10 @@ namespace Voting_System
 
 
         }
-        
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

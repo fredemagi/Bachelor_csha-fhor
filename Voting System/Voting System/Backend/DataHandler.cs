@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity.Core;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -65,7 +66,9 @@ namespace Voting_System.Backend
                 db.SaveChanges();
             }
         }
-        
+
+
+
         // get parties
         public List<VSDTO> GetParties()
         {
@@ -74,13 +77,13 @@ namespace Voting_System.Backend
             using (var db = new DatabaseContainer())
             {
                 queue = from p in db.PartySet select p;
-            }
 
-            foreach(Party p in queue)
-            {
-                parties.Add(new VSDTO { Name = p.Name });
+               
+                foreach (Party p in queue)
+                {
+                    parties.Add(new VSDTO {Name = p.Name, Letter = p.Letter});
+                }
             }
-
             return parties;
         }
 
@@ -92,15 +95,18 @@ namespace Voting_System.Backend
             using (var db = new DatabaseContainer())
             {
                 queue = from p in db.PersonSet select p;
-            }
 
-            foreach (Person p in queue)
-            {
-                people.Add(new VSDTO { Name = p.Name });
-            }
 
+                foreach (Person p in queue)
+                {
+                    people.Add(new VSDTO {Name = p.Name});
+                }
+
+            }
             return people;
         }
+
+
 
         // add party
         public void AddParty(VSDTO party)
@@ -114,6 +120,7 @@ namespace Voting_System.Backend
                 }
             }
         }
+
 
         // add person
         public void AddPerson(VSDTO person)
