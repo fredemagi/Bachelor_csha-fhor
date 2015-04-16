@@ -21,7 +21,7 @@
             </LinearGradientBrush>
         </Grid.OpacityMask>
         <Label Content="Folketingsvalg 2015" HorizontalAlignment="Left" Height="117" Margin="497,10,0,0" VerticalAlignment="Top" Width="637" FontSize="48" FontFamily="Arial Black"/>
-        <Button x:Name="voting_button" Background="LawnGreen" Content="STEM" HorizontalAlignment="Left" Height="84" Margin="1363,9,0,0" VerticalAlignment="Top" Width="207" Click="Button_Click" FontSize="48" FontFamily="Arial" BorderThickness="2,1,1,1">
+        <Button x:Name="voting_button" Background="LawnGreen" Content="STEM" HorizontalAlignment="Left" Height="84" Margin="1363,9,0,0" VerticalAlignment="Top" Width="207" FontSize="48" FontFamily="Arial" BorderThickness="2,1,1,1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -29,7 +29,7 @@
         <Border BorderBrush="#FF0F559B" BorderThickness="1" HorizontalAlignment="Left" Height="84" Margin="471,9,0,0" VerticalAlignment="Top" Width="589" CornerRadius="10"/>
         <Label Content="Welcome to the election of Folketingsvalget 2015!&#xD;&#xA;&#xD;&#xA;To use the system and cast a vote, you need to click on a candidate or a party;&#xD;&#xA;after this, you should press &quot;STEM&quot; you confirm your vote. After you have voted, &#xD;&#xA;the system will log you out.&#xD;&#xA;You can only vote ONCE; you cannot vote for a party and a candidate, only one!&#xD;&#xA;&#xD;&#xA;For any question, do not hesitate to contact a system administrator." HorizontalAlignment="Left" Height="168" Margin="471,99,0,0" VerticalAlignment="Top" Width="607" FontSize="14" FontWeight="Bold"/>
         <Border BorderBrush="#FF1B73CB" BorderThickness="1" HorizontalAlignment="Left" Height="168" Margin="471,93,0,0" VerticalAlignment="Top" Width="589"/>
-        <DataGrid x:Name="datagrid1" HorizontalAlignment="Left" Height="583" Margin="300,297,0,0" VerticalAlignment="Top" Width="991" IsReadOnly="True" MouseLeftButtonUp="datagrid1_MouseLeftButtonUp" AutoGenerateColumns="True" BorderBrush="#FF1B8AF3" Foreground="#FF700505" BorderThickness="3">
+        <DataGrid x:Name="datagrid1" HorizontalAlignment="Left" Height="583" Margin="300,297,0,0" VerticalAlignment="Top" Width="991" IsReadOnly="True" AutoGenerateColumns="True" BorderBrush="#FF1B8AF3" Foreground="#FF700505" BorderThickness="3">
 
             <DataGrid.CellStyle>
                 <Style TargetType="DataGridCell" >
@@ -43,8 +43,8 @@
 
 
         </DataGrid>
-        <CheckBox x:Name="votes_box" Content="Show votes" HorizontalAlignment="Left" Margin="1363,117,0,0" VerticalAlignment="Top" Height="30" Width="118" ToolTip="Check this box to see all given votes." Checked="votes_box_Checked" FontSize="16" FontFamily="SimSun"/>
-
+        <CheckBox x:Name="votes_box" Content="Show votes" HorizontalAlignment="Left" Margin="1363,117,0,0" VerticalAlignment="Top" Height="30" Width="118" ToolTip="Check this box to see all given votes." FontSize="16" FontFamily="SimSun"/>
+        
 
     </Grid>
 </Window>

@@ -34,19 +34,16 @@ namespace Voting_System
         public MainWindow()
         {
             InitializeComponent();
-            dh = new DataHandler();
-            list = new List<GUIDTO>();
+//            dh = new DataHandler();
+  //          list = new List<GUIDTO>();
            // datagrid1.ItemsSource = dh.GetPartyPeople();  //ESSENTIAL PART. SET TO DATA SOURCE!
-            datagrid1.ColumnWidth = 500;
-            datagrid1.FontSize = 15;
-            datagrid1.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+    //        datagrid1.ColumnWidth = 500;
+      //      datagrid1.FontSize = 15;
+        //    datagrid1.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
 
 
-            
-
-
-
-
+            Scanner s = new Scanner();
+            s.Encode("C:/Users/SATLP850132/Desktop/election15.txt");
         }
 
 

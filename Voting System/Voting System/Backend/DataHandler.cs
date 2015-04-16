@@ -15,6 +15,8 @@ namespace Voting_System.Backend
 {
     public class DataHandler
     {
+
+
         /**
         // register vote
         public void CastVote(string who, bool isParty)
