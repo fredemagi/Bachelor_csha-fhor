@@ -4,33 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Voting_System.MainWindow"
         Title="Stemmevindue" ResizeMode="NoResize" Height="918.875" Width="1603.1">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFF0202" Offset="0"/>
+                <GradientStop Color="#FFB51CE2" Offset="0.963"/>
+                <GradientStop Color="#FEFF870F" Offset="0.201"/>
+                <GradientStop Color="#FEF4FF07" Offset="0.425"/>
+                <GradientStop Color="#FE1449FF" Offset="0.806"/>
+                <GradientStop Color="#FE34DE0F" Offset="0.623"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFEE0E0E" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
         <Label Content="Folketingsvalg 2015" HorizontalAlignment="Left" Height="117" Margin="497,10,0,0" VerticalAlignment="Top" Width="637" FontSize="48" FontFamily="Arial Black"/>
         <Button x:Name="voting_button" Background="LawnGreen" Content="STEM" HorizontalAlignment="Left" Height="84" Margin="1363,9,0,0" VerticalAlignment="Top" Width="207" Click="Button_Click" FontSize="48" FontFamily="Arial" BorderThickness="2,1,1,1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="84" Margin="471,9,0,0" VerticalAlignment="Top" Width="589" CornerRadius="10"/>
-        <Label Content="Bla bla bla generel information om, hvordan man stemmer&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;BLA BLA BLA&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;BLA BLA BLA&#xD;&#xA;TBA!!!!!" HorizontalAlignment="Left" Height="168" Margin="471,111,0,0" VerticalAlignment="Top" Width="607"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="168" Margin="471,111,0,0" VerticalAlignment="Top" Width="589"/>
-        <DataGrid x:Name="datagrid1" ItemsSource="{Binding }" HorizontalAlignment="Left" Height="583" Margin="0,297,0,0" VerticalAlignment="Top" Width="1587" IsReadOnly="True" MouseLeftButtonUp="datagrid1_MouseLeftButtonUp" AutoGenerateColumns="False">
-            
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding }"></DataGridTextColumn>
-                <DataGridTextColumn Header="Letter"></DataGridTextColumn>
-            </DataGrid.Columns>
-            
-            
-            
+        <Border BorderBrush="#FF0F559B" BorderThickness="1" HorizontalAlignment="Left" Height="84" Margin="471,9,0,0" VerticalAlignment="Top" Width="589" CornerRadius="10"/>
+        <Label Content="Welcome to the election of Folketingsvalget 2015!&#xD;&#xA;&#xD;&#xA;To use the system and cast a vote, you need to click on a candidate or a party;&#xD;&#xA;after this, you should press &quot;STEM&quot; you confirm your vote. After you have voted, &#xD;&#xA;the system will log you out.&#xD;&#xA;You can only vote ONCE; you cannot vote for a party and a candidate, only one!&#xD;&#xA;&#xD;&#xA;For any question, do not hesitate to contact a system administrator." HorizontalAlignment="Left" Height="168" Margin="471,99,0,0" VerticalAlignment="Top" Width="607" FontSize="14" FontWeight="Bold"/>
+        <Border BorderBrush="#FF1B73CB" BorderThickness="1" HorizontalAlignment="Left" Height="168" Margin="471,93,0,0" VerticalAlignment="Top" Width="589"/>
+        <DataGrid x:Name="datagrid1" HorizontalAlignment="Left" Height="583" Margin="300,297,0,0" VerticalAlignment="Top" Width="991" IsReadOnly="True" MouseLeftButtonUp="datagrid1_MouseLeftButtonUp" AutoGenerateColumns="True" BorderBrush="#FF1B8AF3" Foreground="#FF700505" BorderThickness="3">
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" >
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="SeaGreen"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
+
         </DataGrid>
-        
-        
-        
-        
-        
-                  
-                 
-                  
-                  
+        <CheckBox x:Name="votes_box" Content="Show votes" HorizontalAlignment="Left" Margin="1363,117,0,0" VerticalAlignment="Top" Height="30" Width="118" ToolTip="Check this box to see all given votes." Checked="votes_box_Checked" FontSize="16" FontFamily="SimSun"/>
+
+
     </Grid>
 </Window>
