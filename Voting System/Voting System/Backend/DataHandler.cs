@@ -5,20 +5,17 @@ using System.Data.Entity;
 using System.Data.Entity.Core;
 using System.Linq;
 using System.Net.Mail;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using Voting_System.Database;
 using Voting_System.DTO;
 
 namespace Voting_System.Backend
 {
     public class DataHandler
     {
-        
+        /**
         // register vote
         public void CastVote(string who, bool isParty)
         {
@@ -90,5 +87,7 @@ namespace Voting_System.Backend
             }
             return sb;
         }
+                 **/
+
     }
 }

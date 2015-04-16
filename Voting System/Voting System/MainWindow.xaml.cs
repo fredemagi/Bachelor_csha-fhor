@@ -14,7 +14,6 @@ using System.Windows.Documents.DocumentStructures;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using Voting_System.Backend;
-using Voting_System.Database;
 using Voting_System.DTO;
 using Color = System.Windows.Media.Color;
 using DataGrid = System.Windows.Forms.DataGrid;
@@ -37,7 +36,7 @@ namespace Voting_System
             InitializeComponent();
             dh = new DataHandler();
             list = new List<GUIDTO>();
-            datagrid1.ItemsSource = dh.GetPartyPeople();  //ESSENTIAL PART. SET TO DATA SOURCE!
+           // datagrid1.ItemsSource = dh.GetPartyPeople();  //ESSENTIAL PART. SET TO DATA SOURCE!
             datagrid1.ColumnWidth = 500;
             datagrid1.FontSize = 15;
             datagrid1.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
@@ -57,7 +56,7 @@ namespace Voting_System
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
+     /**   private void Button_Click(object sender, RoutedEventArgs e)
         {
             
             if (!list.Any())
@@ -102,7 +101,7 @@ namespace Voting_System
                 
             }
             
-        }
+        }**/
 
 
         /// <summary>
@@ -110,25 +109,25 @@ namespace Voting_System
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void datagrid1_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e) 
+    /**    private void datagrid1_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e) 
         {
 
             list.Add(datagrid1.SelectedItem as GUIDTO);
 
         }
-
+        **/
 
         /// <summary>
         /// Retrieves all votes given from the database.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void votes_box_Checked(object sender, RoutedEventArgs e)
+    /**    private void votes_box_Checked(object sender, RoutedEventArgs e)
         {
            var sb =  dh.GetAllVotes();
            MessageBox.Show(sb.ToString());
         }
-
+        **/
     }
 }
 
