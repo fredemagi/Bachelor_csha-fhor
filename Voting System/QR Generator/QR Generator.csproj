@@ -42,6 +42,12 @@
     <Compile Include="Mainwindow.Designer.cs">
       <DependentUpon>Mainwindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="QR Windows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QR Windows.Designer.cs">
+      <DependentUpon>QR Windows.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MessagingToolkit.QRCode">
@@ -52,6 +58,11 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="QR Windows.resx">
+      <DependentUpon>QR Windows.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
