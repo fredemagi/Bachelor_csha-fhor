@@ -54,6 +54,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1247, 707);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label2
             // 
@@ -68,7 +69,8 @@
             // 
             // voting_button
             // 
-            this.voting_button.BackColor = System.Drawing.Color.LimeGreen;
+            this.voting_button.BackColor = System.Drawing.Color.Gray;
+            this.voting_button.Enabled = false;
             this.voting_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voting_button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.voting_button.Location = new System.Drawing.Point(1393, 19);
@@ -77,6 +79,7 @@
             this.voting_button.TabIndex = 3;
             this.voting_button.Text = "STEM";
             this.voting_button.UseVisualStyleBackColor = false;
+            this.voting_button.Click += new System.EventHandler(this.voting_button_Click);
             // 
             // Voting_Screen
             // 

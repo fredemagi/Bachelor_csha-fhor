@@ -9,6 +9,9 @@ using System.Drawing.Printing;
 using System.Windows.Forms;
 using System.Drawing;
 
+
+//For documentation for this class, see project "Voting System".
+
 namespace Voting_System
 {
     public class Printer
@@ -23,40 +26,27 @@ namespace Voting_System
         private PaperSize _size = new PaperSize("Custom", 800, 200);
         private PaperSize _sizeQR = new PaperSize("Custom QR", 2200, 1200);
 
-
-        /// <summary>
-        /// Set QR code.
-        /// </summary>
-        /// <param name="QRcode">QR image to be set.</param>
         public void SetQR(Image QRcode)
         {
             _QRcode = QRcode;
         }
 
-
-        /// <summary>
-        /// Set output.
-        /// </summary>
-        /// <param name="output">Path of output to be set.</param>
         public void SetOutput(string output)
         {
             _output = output;
         }
 
-
-        /// <summary>
-        /// Set printer.
-        /// </summary>
-        /// <param name="printer">Printer to be set.</param>
         public void SetPrinter(string printer)
         {
             _printer = printer;
         }
 
+        private Image BitmapToImage(Bitmap bmp)
+        {
+            Image img = (Image)bmp;
+            return img;
+        }
 
-        /// <summary>
-        /// Print a string (in this case to the screen).
-        /// </summary>
         public void Print()
         {
             PrintDocument pd = new PrintDocument();
@@ -71,10 +61,6 @@ namespace Voting_System
 
         }
 
-
-        /// <summary>
-        /// Print a QR image (in this case to the screen).
-        /// </summary>
         public void PrintQR()
         {
             PrintDocument pd = new PrintDocument();
@@ -95,7 +81,7 @@ namespace Voting_System
 
         private void PrintQREvent(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(_QRcode, new Point(10,10));
+            e.Graphics.DrawImage(_QRcode, new Point(10, 10));
         }
     }
 }
