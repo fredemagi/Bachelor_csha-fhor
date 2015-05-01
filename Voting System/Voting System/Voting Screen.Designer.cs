@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 9);
+            this.label1.Location = new System.Drawing.Point(271, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(679, 73);
             this.label1.TabIndex = 0;
@@ -48,11 +48,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(221, 238);
+            this.dataGridView1.Location = new System.Drawing.Point(159, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1247, 707);
+            this.dataGridView1.Size = new System.Drawing.Size(955, 707);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -60,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(491, 105);
+            this.label2.Location = new System.Drawing.Point(281, 105);
             this.label2.MaximumSize = new System.Drawing.Size(679, 800);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(666, 108);
@@ -73,7 +74,7 @@
             this.voting_button.Enabled = false;
             this.voting_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voting_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.voting_button.Location = new System.Drawing.Point(1393, 19);
+            this.voting_button.Location = new System.Drawing.Point(998, 33);
             this.voting_button.Name = "voting_button";
             this.voting_button.Size = new System.Drawing.Size(275, 129);
             this.voting_button.TabIndex = 3;
@@ -83,10 +84,11 @@
             // 
             // Voting_Screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1680, 948);
+            this.ClientSize = new System.Drawing.Size(1276, 693);
             this.Controls.Add(this.voting_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
