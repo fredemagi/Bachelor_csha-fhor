@@ -31,8 +31,9 @@ namespace Voting_System
         private ImageProcesserHandler _imageProcesserHandler;
         private FrameCapture _frameCapture;
         private List<DetectedBarcode> _barcodelist; 
-        private string path; 
-        
+        private string path;
+
+        private Voting_Screen v;
         
         /// <summary>
         /// Initializes components for login-scanner-window and components for webcam-use.

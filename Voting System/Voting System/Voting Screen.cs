@@ -34,7 +34,7 @@ namespace Voting_System
             dataGridView1.RowTemplate.MinimumHeight = 50;
             dataGridView1.ScrollBars = ScrollBars.Vertical;
             dataGridView1.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(Target);
-              
+
         }
 
 
@@ -54,17 +54,14 @@ namespace Voting_System
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)  
+        private void dataGridView1_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
             InvokeVoteCasting(() =>
             {
                 cell = dataGridView1.SelectedCells[0].Value as string;
-                
                 voting_button.Enabled = true;
                 voting_button.BackColor = Color.LimeGreen;
             });
-            
         }
 
 

@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Voting_Screen));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.voting_button = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -45,17 +47,6 @@
             this.label1.Size = new System.Drawing.Size(679, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Folketingsvalget 2015";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 216);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(955, 707);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label2
             // 
@@ -74,13 +65,31 @@
             this.voting_button.Enabled = false;
             this.voting_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voting_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.voting_button.Location = new System.Drawing.Point(998, 33);
+            this.voting_button.Location = new System.Drawing.Point(967, 3);
             this.voting_button.Name = "voting_button";
-            this.voting_button.Size = new System.Drawing.Size(275, 129);
+            this.voting_button.Size = new System.Drawing.Size(226, 98);
             this.voting_button.TabIndex = 3;
             this.voting_button.Text = "STEM";
             this.voting_button.UseVisualStyleBackColor = false;
             this.voting_button.Click += new System.EventHandler(this.voting_button_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 237);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1190, 642);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.voting_button);
+            this.panel1.Location = new System.Drawing.Point(0, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1196, 877);
+            this.panel1.TabIndex = 5;
             // 
             // Voting_Screen
             // 
@@ -88,16 +97,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1276, 693);
-            this.Controls.Add(this.voting_button);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1200, 693);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Voting_Screen";
             this.Text = "Stemmevindue";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,9 +116,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button voting_button;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
 
     }
 }
