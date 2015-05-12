@@ -17,8 +17,6 @@ namespace Voting_System
         private Login_scanner_window mainWindow;
         public List<Login_scanner_window.StringValue> list { get; set; }
         private string cell;
-        public event EventHandler ClosingWindow;
-
 
         /// <summary>
         /// Initializing components, and sets properties for the datagridview. 

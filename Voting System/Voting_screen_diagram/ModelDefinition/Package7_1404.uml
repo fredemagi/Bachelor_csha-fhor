@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="71113f04-3ed9-4b02-882f-6f2407f31294"
+  name="BarcodeData"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0c773b99-4b07-4ee0-aa8c-dabc45ab5b75"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOzeki.Media.MediaHandlers.Video.CV.BarcodeData"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c9ab8352-30f0-445a-90b5-bdf758393b14"
+        name="BarcodeDetectedEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b93012da-90f6-4637-a628-1eb4e695d8e2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FNVA.dll Namespace%3DOzeki.Media.MediaHandlers.Video.CV.BarcodeData Type%3DBarcodeDetectedEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d829c670-7e28-4c2f-83d3-9e85dbddbe58"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8473763c-abd2-4d75-bb27-714b777b256b">
+                <propertyInstance
+                  Id="efdaa0de-f83f-4bca-aa6b-4ddd038a8c97"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f1313eaa-132b-4d7c-b09e-3ae5a2a8d8c4">
+                <propertyInstance
+                  Id="80ca1e58-920a-4eed-8cd0-82593a2c37aa"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="64fe2354-90ad-4c68-a644-b0b3df86d2c8">
+                <propertyInstance
+                  Id="85d8e4a0-13f8-41a1-97e4-560099230d27"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac00fdd2-d280-452a-bb0a-547dc886d5c5">
+                <propertyInstance
+                  Id="f01c9c68-d40d-4207-9ab3-20abb8f0ee9d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d612f318-eb77-4b6e-af8f-a834d024a507">
+                <propertyInstance
+                  Id="00ef6fda-1fc1-48f1-add5-9ca134ea7618"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="ee3ab006-963b-4290-9924-9cf6a2f2221e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fabbb98e-9d41-4b60-a857-0e915e76a9ec"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package1_1404.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="65b481cb-257c-43dc-9044-dda496c0a86b"
+        name="DetectedBarcode"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="28264f8c-5e11-4ea2-8bb8-53d00f7ab177"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FNVA.dll Namespace%3DOzeki.Media.MediaHandlers.Video.CV.BarcodeData Type%3DDetectedBarcode"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="65ff9541-0d43-4a05-8cf0-aa35cb7ea341"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3aa24c52-c553-4c57-b397-e741423ba56e">
+                <propertyInstance
+                  Id="d323075a-acbc-4036-ad62-1ce7384cd1d5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8990db16-85a9-4c1e-8719-65b0fbea561d">
+                <propertyInstance
+                  Id="65afbd89-9413-42ce-99c5-0855ef7a9903"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="faf6c06d-0d7d-43eb-8e8a-de32548ca700">
+                <propertyInstance
+                  Id="e60df866-effd-4763-8f9e-ca53ed58bf30"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50b49bf7-4213-4215-9a5e-e19b7a4287c3">
+                <propertyInstance
+                  Id="e60b8f03-dbb5-422c-9802-eef4a2a850a0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01549074-1801-4ad1-a2b3-8d7de70fe0f2">
+                <propertyInstance
+                  Id="b8f24f40-73a8-4a36-96dc-7bb28269068c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

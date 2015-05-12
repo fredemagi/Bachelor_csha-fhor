@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="91862411-c9ae-4232-8f05-de236f8d8c05"
+  name="Video"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a9991830-3260-4b70-8b58-450b0e7e9609"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOzeki.Media.MediaHandlers.Video"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1c943dab-fa5a-4e65-bfa5-b08a61f16783"
+        LastKnownName="CV"
+        LastKnownLocation="Package6_1404.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="39ae4543-e304-4071-bc90-299088142240"
+        name="WebCamera"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1f132057-01cf-4d80-92f1-f2cf4af6d129"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FVoIPSDK.dll Namespace%3DOzeki.Media.MediaHandlers.Video Type%3DWebCamera"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="285e595c-f42d-477e-b69e-7366aa55a325"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f59edcb-65df-4017-9e7d-d45b2198cb55">
+                <propertyInstance
+                  Id="367dec70-96e5-482d-b5c1-49da34a69816"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5705b6c0-782a-4223-98ec-7a142ba687f9">
+                <propertyInstance
+                  Id="c047e9a5-2b11-4db8-9e4c-4254786d963b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9526af36-e49b-487f-ab2d-53c45944b47c">
+                <propertyInstance
+                  Id="397891ee-20ea-4071-a08e-9ca289d6c73c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b5ec6b7f-e017-41ad-81cf-336db58d4d4a">
+                <propertyInstance
+                  Id="fff66534-e334-4a11-abc6-c19d4ac39f88"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="408491c1-370d-4aa8-b9dc-5fb015913cfd">
+                <propertyInstance
+                  Id="3a7d7213-2533-4956-b4b6-a947bd37b2eb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fb19d52f-e871-4616-b56e-409d607a7103"
+        name="DrawingImageProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0e144524-708b-4ad2-91a2-2d0c7e519a11"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FVoIPSDK.dll Namespace%3DOzeki.Media.MediaHandlers.Video Type%3DDrawingImageProvider"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="82a1684a-a7ff-44c7-8e8d-6a979f376c52"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11c4e326-6fff-4264-8140-c7ddec9463bb">
+                <propertyInstance
+                  Id="11d99ced-1b57-4944-9731-d01c7762ee9c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f4fbb9b0-ae67-4c76-b4d9-7705ba9f8c5f">
+                <propertyInstance
+                  Id="39d9b3e3-87b6-4334-b60d-1adbe80683d6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="73018223-1073-4984-8968-74b39b3ce6f1">
+                <propertyInstance
+                  Id="4be96719-e7e1-459b-9a63-32b9b2c170a8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1f85ba4-9b5b-4b7a-b168-f41b4a5beb75">
+                <propertyInstance
+                  Id="e245c05d-c3b0-4887-a771-b4269c8eb607"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ee4fc506-5f96-42cc-8c04-08ddc5b17884">
+                <propertyInstance
+                  Id="434999b0-22c9-48de-97fb-e02e3cd950bf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="83a39778-bff6-484d-93f2-5f26fb0ac6b0"
+        name="FrameCapture"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="45f8ac84-929d-4c46-9775-a3aa824df660"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FVoIPSDK.dll Namespace%3DOzeki.Media.MediaHandlers.Video Type%3DFrameCapture"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3958274c-00b0-4abb-8c9f-118b5ee5304c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="62b3a98b-9012-433d-8769-a895e3a80ef2">
+                <propertyInstance
+                  Id="45242ac5-1df7-4ee9-8a4e-f2b1c6ae7f74"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c695ed2-5d9a-42ec-8eab-b520616ec05f">
+                <propertyInstance
+                  Id="f8400e11-e380-4b40-a1a4-fc7b3e524cff"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ab5e976-2947-4dee-bf6c-8fc4ea4c9171">
+                <propertyInstance
+                  Id="9e273a1d-1ca2-45cc-a50d-9073e7e71731"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="193daecd-7829-4d72-add4-b31bbbcbd898">
+                <propertyInstance
+                  Id="60d3e2e2-09b2-4e11-b208-550792403d8a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e925f3a3-c7dd-4bad-9bc6-114b2280854a">
+                <propertyInstance
+                  Id="95c31c4e-e126-49b2-b16f-f2a32da7233c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

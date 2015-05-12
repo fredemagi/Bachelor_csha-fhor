@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1c943dab-fa5a-4e65-bfa5-b08a61f16783"
+  name="CV"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="fade9c02-f8bd-4f80-b3fb-4c21dbeecc5e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOzeki.Media.MediaHandlers.Video.CV"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="71113f04-3ed9-4b02-882f-6f2407f31294"
+        LastKnownName="BarcodeData"
+        LastKnownLocation="Package7_1404.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f7aed62f-13eb-4de3-bc4f-444d20a726de"
+        LastKnownName="ImageTools"
+        LastKnownLocation="Package8_1404.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="80f760e9-467f-427e-aace-9b664e270f72"
+        name="ImageProcesserHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9cb9e19e-cd73-4e6e-91b0-463fbd023359"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FFredeMagi%2FDocuments%2FGitHub%2FBachelor_csha-fhor%2FNVA.dll Namespace%3DOzeki.Media.MediaHandlers.Video.CV Type%3DImageProcesserHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3c7eb0f2-de26-411f-8468-a508dfbb0d35"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95954eea-a5ae-451a-b3f8-f76451ff0fe6">
+                <propertyInstance
+                  Id="a37679eb-47d9-412c-a1bb-2e19c7c5137f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6de8b79b-4eba-4692-aa8b-51fef6212c6f">
+                <propertyInstance
+                  Id="25a80d3f-681d-498e-860e-9160a6de0a0f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bcae4901-ae81-4ade-98ac-2d9d63497b37">
+                <propertyInstance
+                  Id="e532c40e-c750-4dbd-b357-76a27abfea76"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="23cf7ef9-2b84-4590-9842-ae905a7abceb">
+                <propertyInstance
+                  Id="d21061b9-6a7e-4c51-befb-ce4455023eee"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7cb7f74e-5df4-4803-b0fd-070262a32319">
+                <propertyInstance
+                  Id="6ecda31d-be79-4963-92f3-bd86dd20c4b5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
