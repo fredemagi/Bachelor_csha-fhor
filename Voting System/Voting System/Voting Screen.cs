@@ -17,11 +17,12 @@ namespace Voting_System
         private Login_scanner_window mainWindow;
         public List<Login_scanner_window.StringValue> list { get; set; }
         private string cell;
+        private static Voting_Screen instance;
 
         /// <summary>
         /// Initializing components, and sets properties for the datagridview. 
         /// </summary>
-        public Voting_Screen()
+        private Voting_Screen()
         {
             InitializeComponent();
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
@@ -35,6 +36,15 @@ namespace Voting_System
 
         }
 
+
+        /// <summary>
+        /// Ensures that only one instances can be created. 
+        /// </summary>
+        /// <returns></returns>
+        public static Voting_Screen getInstance()
+        {
+            return instance ?? (instance = new Voting_Screen());
+        }
 
         /// <summary>
         /// Responsible for unsetting selection for row 1 at startup.

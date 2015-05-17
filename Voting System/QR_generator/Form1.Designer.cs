@@ -73,7 +73,7 @@
             this.generate_button.Name = "generate_button";
             this.generate_button.Size = new System.Drawing.Size(287, 43);
             this.generate_button.TabIndex = 3;
-            this.generate_button.Text = "Generér QR Code";
+            this.generate_button.Text = "Generér QR kode";
             this.generate_button.UseVisualStyleBackColor = true;
             this.generate_button.Click += new System.EventHandler(this.generate_button_Click);
             // 

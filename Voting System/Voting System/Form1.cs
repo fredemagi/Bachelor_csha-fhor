@@ -161,11 +161,10 @@ namespace Voting_System
                
                 
                 this.Hide();
-                var v = new Voting_Screen();
+                Voting_Screen.getInstance().list = lst;
+                Voting_Screen.getInstance().Sourcelist();
+                Voting_Screen.getInstance().ShowDialog();
 
-                v.list = lst;
-                v.Sourcelist();
-                v.ShowDialog();
                 this.Dispose();
                 
 
